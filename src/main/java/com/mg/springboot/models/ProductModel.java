@@ -12,13 +12,14 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.hateoas.RepresentationModel;
 
 @Entity
 @Table(name = "TB_PRODUCTS")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductModel implements Serializable {
+public class ProductModel extends RepresentationModel<ProductModel> implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
